@@ -3,23 +3,17 @@ def preencher_matriz(matriz):
         for j in range(len(matriz[i])):
             matriz[i][j] = int(input(f"Digite um valor para matriz[{i}][{j}]: "))
 
-matriz_A = [
-    [0.0] * 4,
-    [0.0] * 4,
-    [0.0] * 4
-]
+def inserir_tamanho_matriz(linha, coluna):
+    return [[0.0 for _ in range(coluna)] for _ in range(linha)]
 
-matriz_B = [
-    [0.0] * 4,
-    [0.0] * 4,
-    [0.0] * 4
-]
+linha = 2
+coluna = 2
 
-soma_matriz = [
-    [0.0] * 4,
-    [0.0] * 4,
-    [0.0] * 4
-]
+matriz_A = inserir_tamanho_matriz(linha, coluna)
+
+matriz_B = inserir_tamanho_matriz(linha, coluna)
+
+soma_matriz = inserir_tamanho_matriz(linha, coluna)
 
 print("====Prenchendo Matriz A====")
 preencher_matriz(matriz_A)
